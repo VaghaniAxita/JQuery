@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <button id="btn">Theme</button>
+    </header>
+     <h1>To-Do List</h1>
+     <input type="text" id="taskInput" placeholder="Enter task">
+     <button id="addTask">Add Task</button>
+     <ul id="taskList"></ul> 
+    </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="./script.js"></script>
+</html> 
+ 
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body{
+        background-color: rgb(166, 216, 200);
+    }
+.container {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: rgb(72, 143, 119);
+}
+
+h1 {
+    border: dotted;
+  text-align: center;
+  color: rgb(153, 232, 203);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 8px 16px;
+  background-color: #11493c;
+  color: white;
+  border: darkcyan;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f2f2f2;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.delete-btn {
+  margin-left: auto;
+  background-color: #f44336;
+}
+
+.edit-btn {
+  margin-right: 10px;
+  background-color: #2196F3;
+}
+
+#taskCounter {
+  text-align: center;
+  font-weight: bold;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>TODO LIST</h1>
+    <p id="taskCounter"></p>
+    <input type="text" id="taskInput" placeholder="Enter a new task">
+    <button id="addBtn">ADD</button>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script>
+  // Select elements
+const taskInput = document.getElementById('taskInput');
+const addBtn = document.getElementById('addBtn');
+const taskList = document.getElementById('taskList');
+const taskCounter = document.getElementById('taskCounter');
+
+let tasks = [];
+
+// Function to render the tasks
+function renderTasks() {
+  taskList.innerHTML = '';
+  tasks.forEach((task, index) => {
+    const listItem = document.createElement('li');
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.checked = task.completed;
+    checkbox.addEventListener('change', () => {
+      tasks[index].completed = checkbox.checked;
+      renderTasks();
+    });
+    const taskText = document.createElement('span');
+    taskText.textContent = task.title;
+    if (task.completed) {
+      taskText.classList.add('completed');
+    }
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'Delete';
+    deleteBtn.addEventListener('click', () => {
+      tasks.splice(index, 1);
+      renderTasks();
+      updateTaskCounter();
+    });
+    listItem.appendChild(checkbox);
+    listItem.appendChild(taskText);
+    listItem.appendChild(deleteBtn);
+    taskList.appendChild(listItem);
+  });
+  updateTaskCounter();
+}
+
+// Function to update the task counter
+function updateTaskCounter() {
+  const pendingTasks = tasks.filter(task => !task.completed);
+  taskCounter.textContent = `Total Pending Tasks: ${pendingTasks.length}`;
+}
+
+// Event listener for adding a new task
+addBtn.addEventListener('click', () => {
+  const taskTitle = taskInput.value.trim();
+  if (taskTitle !== '') {
+    tasks.push({ title: taskTitle, completed: false });
+    taskInput.value = '';
+    renderTasks();
+    updateTaskCounter();
+  }
+});
+
+// Render initial tasks
+renderTasks();
+
+
+
+  </script>
+ 
+</body>
+</html> -->

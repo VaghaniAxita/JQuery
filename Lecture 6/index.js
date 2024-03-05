@@ -1,7 +1,10 @@
-// $("toggle").click(()=> {
-//     $("#nav-items").show();
-// });
+$(document).ready(function () {
+    $("#mobile-menu").click(function () {
+        $(".nav-list").toggleClass("show");
+    });
+});
 
+// swiper
 
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
